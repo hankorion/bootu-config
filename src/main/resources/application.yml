@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: bootu-config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8861/eureka/
