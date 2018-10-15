@@ -1,12 +1,22 @@
 spring:
   application:
     name: bootu-config
+  rabbitmq:
+    host: 10.0.0.211
+    port: 5672
   cloud:
     config:
       server:
         git:
           uri: https://github.com/hankorion/bootu-config-repo.git
+    bus:
+      enabled: true
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8861/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
